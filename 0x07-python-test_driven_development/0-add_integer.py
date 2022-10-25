@@ -1,13 +1,11 @@
 #!/usr/bin/python3
+"""Integers addition."""
+
 
 def add_integer(a, b=98):
-    """addition of integers"""
-    try:
-        a = int(a)
-    except (ValueError, TypeError):
-       raise TypeError("a must be an integer")
-    try:
-        b = int(b)
-    except (ValueError, TypeError):
-       raise TypeError("b must be an integer")
-    return a + b
+    """Add two integers."""
+    if type(a) not in [int, float]:
+        raise TypeError("a must be an integer")
+    if type(b) not in [int, float]:
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
