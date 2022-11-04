@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """The rectsangle class"""
+    """The rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -67,3 +67,8 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y mustbe >= 0")
         self.__y = y
+
+    def display(self):
+        """public method display"""
+        for i in range(self.height):
+            print("#" * self.width)
