@@ -72,3 +72,6 @@ class Rectangle(Base):
         """public method display"""
         for i in range(self.height):
             print("#" * self.width)
+
+    def area(self):
+        return self.width * self.height
